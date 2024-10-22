@@ -1,0 +1,21 @@
+<div class="container">
+
+
+  <!-- Lista de Startups -->
+  <div class="row mt-4">
+    <div *ngFor="let startup of startups" class="col-md-4">
+      <mat-card class="mb-4" (click)="goToDetails(startup.id)">
+        <mat-card-title>{{ startup.nome }}</mat-card-title>
+        <img mat-card-image src="assets/logo.jpg">
+        <mat-card-content>
+          <p>
+            Setor: {{ startup.setor }} <br>
+            Percentual Disponível: {{ startup.percentualDisponivel }}% <br>
+            Valor Procurado: R$ {{ startup.valorProcurado | number:'1.2-2' }} <br>
+            Votos: {{ startup.votos }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

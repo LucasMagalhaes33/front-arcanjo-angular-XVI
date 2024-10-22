@@ -1,0 +1,90 @@
+.container.startup-details {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-md-6 {
+  flex: 1;
+  min-width: 300px;
+}
+
+img.img-animal {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+p.info-text span {
+  font-weight: 600;
+  color: #333;
+}
+
+button.btn.btn-apoio {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.btn.btn-apoio:hover {
+  background-color: #218838;
+}
+
+button.btn.btn-apoio:active {
+  background-color: #1e7e34;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mt-2 {
+  margin-top: 15px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container.startup-details {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .info-text {
+    font-size: 1rem;
+  }
+
+  button.btn.btn-apoio {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}
