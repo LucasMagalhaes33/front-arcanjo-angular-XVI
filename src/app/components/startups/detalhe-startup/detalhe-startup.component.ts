@@ -28,7 +28,7 @@ export class DetalheStartupComponent {
 
   contatoWpp(): void {
     // Redireciona para o WhatsApp Web com o seu número
-    const whatsappUrl = 'https://web.whatsapp.com/send?phone=+5591985645497&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20projeto!';
+    const whatsappUrl = 'https://web.whatsapp.com/send?phone=+5591980166691&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20projeto!';
     window.open(whatsappUrl, '_blank');
   }
 
