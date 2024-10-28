@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'contato',
     loadChildren: () => import('./components/shared/contato/contato.module').then(p => p.ContatoModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./components/shared/payment/payment.module').then(p => p.PaymentModule)
   }
 
 ];

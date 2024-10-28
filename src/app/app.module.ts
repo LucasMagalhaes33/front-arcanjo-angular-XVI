@@ -15,6 +15,7 @@ import {LandingComponent} from './components/landing/landing.component';
 import {FormsModule} from "@angular/forms";
 import { RecomendacaoComponent } from './components/recomendacao/recomendacao.component';
 import { ContatoComponent } from './components/shared/contato/contato.component';
+import { PaymentComponent } from './components/shared/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContatoComponent } from './components/shared/contato/contato.component'
     HomeComponent,
     HeaderComponent,
     DetalheStartupComponent,
-    LandingComponent
+    LandingComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

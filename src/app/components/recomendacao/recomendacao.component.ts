@@ -14,7 +14,11 @@ export class RecomendacaoComponent {
   constructor(private investidorService: InvestidorService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.investidorService.getRecomendacaoById(1).subscribe(
+    // Gera um número aleatório entre 1 e 30
+    const randomId = Math.floor(Math.random() * 4) + 1;
+
+    // Usa o ID aleatório na requisição
+    this.investidorService.getRecomendacaoById(randomId).subscribe(
       data => {
         data.img = this.img;
         this.startups = data;

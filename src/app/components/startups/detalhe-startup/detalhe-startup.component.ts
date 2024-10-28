@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {StartupService} from "../../../services/startup.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-detalhe-startup',
@@ -11,7 +11,7 @@ export class DetalheStartupComponent {
   startup: any;
   progressPercentage: number = 0;
 
-  constructor(private route: ActivatedRoute, private startupService: StartupService) { }
+  constructor(private route: ActivatedRoute, private startupService: StartupService, private router: Router) { }
 
   ngOnInit(): void {
     const id = +(this.route.snapshot.paramMap.get('id') || 0);
@@ -26,8 +26,15 @@ export class DetalheStartupComponent {
     });
   }
 
+  contatoWpp(): void {
+    // Redireciona para o WhatsApp Web com o seu número
+    const whatsappUrl = 'https://web.whatsapp.com/send?phone=+5591985645497&text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20projeto!';
+    window.open(whatsappUrl, '_blank');
+  }
+
   apoiarProjeto(): void {
-    // Lógica para apoiar o projeto (pode ser redirecionar ou abrir modal de pagamento)
-    alert('Obrigado por apoiar!');
+    // Redireciona para a página de pagamento com o valor da meta como parâmetro
+    this.router.navigate(['/payment'], { queryParams: { valor: this.startup.valorProcurado,nome: this.startup.nome,
+        setor: this.startup.setor } });
   }
 }

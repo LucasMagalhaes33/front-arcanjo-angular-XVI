@@ -1,0 +1,25 @@
+<div class="container payment-page">
+  <!-- Cabeçalho da Página -->
+  <h2 class="page-title">Pagamento Seguro</h2>
+
+  <!-- Resumo do Projeto -->
+  <div class="payment-summary">
+    <p class="summary-text">Você está investindo no projeto:</p>
+    <h3 class="startup-name">{{ startup?.nome }}</h3>
+    <p class="summary-text">Setor: {{ startup?.setor }}</p>
+    <p class="meta-valor">Meta: R$ {{ valorProcurado | number:'1.2-2' }}</p>
+  </div>
+
+  <!-- Seção de Pagamento -->
+  <div class="payment-actions">
+    <p class="secure-text">
+      <mat-icon>lock</mat-icon> Transação 100% segura
+    </p>
+    <button class="btn btn-secondary btn-lg btn-block cancel-btn" (click)="cancelarPagamento()">
+      Cancelar
+    </button>
+    <button style="margin-left: 10px" class="btn btn-primary btn-lg btn-block pay-btn" (click)="confirmarPagamento()">
+      Confirmar Pagamento
+    </button>
+  </div>
+</div>

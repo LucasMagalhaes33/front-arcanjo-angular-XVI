@@ -88,3 +88,30 @@ button.btn.btn-apoio:active {
     font-size: 1.1rem;
   }
 }
+
+/* Ajusta o estilo do ícone de contato */
+.contact-icon {
+  margin-right: 10px;
+  border: 2px solid #007bff; /* cor de borda para destaque */
+  border-radius: 50%;
+  color: #007bff; /* cor do ícone */
+  background-color: #f0f8ff; /* cor de fundo suave */
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito de hover para o ícone */
+.contact-icon:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Espaçamento no botão principal */
+.btn-apoio {
+  margin-top: 15px;
+}
